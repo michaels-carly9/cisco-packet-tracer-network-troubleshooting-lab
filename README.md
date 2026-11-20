@@ -23,13 +23,19 @@ The objective of this lab is to configure, validate, troubleshoot, and resolve c
 
 
 ## Network Topology
-<!-- insert screenshot and description here -->
+![Network Topology](screenshots/01-Network-Topology.png)
+
+The lab topology consists of one Cisco 2911 router, two Cisco 2960 switches, and four PCs.
 
 ## Router Configuration Verification
-<!--insert screenshot and description here -->
+![Router Configuration Verification](screenshots/02-Router-Configuration-Verified.png)
+
+Verified GigabitEthernet0/0 and GigabitEthernet0/1 were operational and configured correctly.
 
 ## Connectivity Validation
-<!-- insert screenshot and description here -->
+![Connectivity Validation](screenshots/03-Network-Connectivity-Validation.png)
+
+Confirmed successful local and remote network connectivity using ICMP testing.
 
 ## Troubleshooting Incidents 
 
