@@ -40,7 +40,35 @@ Confirmed successful local and remote network connectivity using ICMP testing.
 ## Troubleshooting Incidents 
 
 ### Incident 001 - Incorrect Default Gateway 
-<!-- insert screenshot and troubleshooting -->
+
+#### Symptoms
+![Symptoms](screenshots/001-symptom.png)
+
+PC3 successfully communicated with local devices on the 192.168.20.0/24 subnet.
+Communication to remote networks failed.
+
+Evidence:
+- Successful ping to PC4
+- Failed ping to PC1
+
+#### Investigation
+![Investigations](screenshots/001-investigation.png)
+
+IP configuration was examined on PC3.
+An incorrect default gateway was indentified.
+Expected Gateway: 192.168.20.1
+Configured Gateway: 192.168.20.254
+
+#### Resolution
+![Resolution](screenshots/001-resolution.png)
+
+The default gateway was corrected from 192.168.20.254 to 192.168.20.1
+
+#### Verification
+![Verification](screenshots/001-verification.png)
+
+Connectivity to remote networks was restored.
+PC3 successfully communicated with hosts located on the 192.168.10.0/24 subnet. Issue resolved. 
 
 ### Incident 002 - Router Interface Shutdown
 <!-- insert screenshot and troubleshooting -->
