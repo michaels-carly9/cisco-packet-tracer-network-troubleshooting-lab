@@ -71,4 +71,36 @@ Connectivity to remote networks was restored.
 PC3 successfully communicated with hosts located on the 192.168.10.0/24 subnet. Issue resolved. 
 
 ### Incident 002 - Router Interface Shutdown
+
+#### Symptoms 
+![Symptoms](incidents/002-symptom.png)
+
+Users were unable to communicate with hosts located on the 192.168.20.0/24 network.
+
+Evidence:
+- Failed ping from PC1 to PC3
+- Remote subnet inaccesible
+
+#### Investigation
+![Investigation](incidents/002-investigation.png)
+
+Router interface status was examined using:
+
+show ip interface brief
+
+GigabitEthernet0/1 was found in an administratively down state
+
+#### Resolution
+![Resolution](incidents/002-resolution.png)
+
+The disabled interface was re-enabled using:
+
+interface g0/1 no shutdown
+
+#### Verification
+![Verification](incidents/002-verification.png)
+
+Connectivity to the remote subnet was restored.
+
+GigabitEthernet0/1 returned to an operational state and ICMP communication was successful.
 <!-- insert screenshot and troubleshooting -->
