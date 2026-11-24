@@ -27,6 +27,11 @@ The objective of this lab is to configure, validate, troubleshoot, and resolve c
 
 The lab topology consists of one Cisco 2911 router, two Cisco 2960 switches, and four PCs.
 
+## Updated Network Topology
+![Updated Network Topology](screenshots/04-topology-with-server.png)
+
+Added a server to the network topology to provide DNS services for name resolution testing and troubleshooting. 
+
 ## Router Configuration Verification
 ![Router Configuration Verification](screenshots/02-Router-Configuration-Verified.png)
 
