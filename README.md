@@ -103,4 +103,33 @@ interface g0/1 no shutdown
 Connectivity to the remote subnet was restored.
 
 GigabitEthernet0/1 returned to an operational state and ICMP communication was successful.
+
+### Incident 003 - IP Address Misconfiguration
+
+#### Symptoms
+![Symptoms](incidents/003-symptom.png)
+
+PC4 was unable to communicate with local network devices.
+
+Evidence:
+- Failed ping to the default gateway.
+- Failed ping to PC3.
+
+#### Investigation
+![Investigation](incidents/003-investigation.png)
+
+A review of endpoint network settings identified an incorrect IP address assignment.
+
+Expected: 192.168.20.11
+Actual: 192.168.30.11
+
+#### Resolution
+![Resolution](incidents/003-resolution.png)
+
+The endpoint IP address was corrected from 192.168.30.11 to 192.168.20.11.
+
+#### Verification
+![Verification](incidents/003-verification.png)
+
+Connectivity was successfully restored. PC4 was able to communicate with the default gateway and other hosts on the local subnet.
 <!-- insert screenshot and troubleshooting -->
