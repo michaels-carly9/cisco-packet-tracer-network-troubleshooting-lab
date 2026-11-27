@@ -32,6 +32,31 @@ The lab topology consists of one Cisco 2911 router, two Cisco 2960 switches, and
 
 Added a server to the network topology to provide DNS services for name resolution testing and troubleshooting. 
 
+## DNS Service Configuration
+
+A server was added to the network to provide internal DNS services.
+
+Server Configuration:
+- IP Address: 192.168.20.100
+- Subnet Mask: 255.255.255.0
+- Default Gateway: 192.168.20.1
+
+DNS Record:
+- fileserver.local --> 192.168.20.100
+
+## DNS Baseline Validation
+![DNS Baseline Validation](screenshots/05-dns-baseline-validation.png)
+
+A DNS lookup was validated by succesfully resolving the hostname fileserver.local to its configured IP address.
+
+### Test Performed
+- ping fileserver.local
+
+### Result
+- Success
+
+The successful response confirmed that the DNS service was functioning correctly and was ready for troubleshooting scenarios involving name resolution failures.
+
 ## Router Configuration Verification
 ![Router Configuration Verification](screenshots/02-Router-Configuration-Verified.png)
 
