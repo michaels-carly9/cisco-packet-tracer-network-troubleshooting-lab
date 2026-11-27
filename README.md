@@ -59,6 +59,7 @@ The successful response confirmed that the DNS service was functioning correctly
 
 ## VLAN Configuration Baseline
 ![VLAN Configuration Baseline](screenshots/06-vlan-baseline.png)
+
 VLANs were created on Switch1 to demonstrate Layer 2 troubleshooting scenarios.
 
 VLAN 10 (SALES):
