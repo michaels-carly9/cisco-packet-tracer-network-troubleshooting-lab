@@ -57,6 +57,19 @@ A DNS lookup was validated by succesfully resolving the hostname fileserver.loca
 
 The successful response confirmed that the DNS service was functioning correctly and was ready for troubleshooting scenarios involving name resolution failures.
 
+## VLAN Configuration Baseline
+![VLAN Configuration Baseline](screenshots/06-vlan-baseline.png)
+VLANs were created on Switch1 to demonstrate Layer 2 troubleshooting scenarios.
+
+VLAN 10 (SALES):
+- Fa0/1
+- Fa0/2
+
+VLAN 20 (HR):
+- reserved for testing purposes
+
+The configuration was verified using: show vlan brief.
+
 ## Router Configuration Verification
 ![Router Configuration Verification](screenshots/02-Router-Configuration-Verified.png)
 
