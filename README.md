@@ -20,6 +20,10 @@ The objective of this lab is to configure, validate, troubleshoot, and resolve c
 - Root Cause Analysis
 - ICMP Testing
 - Techincal Documentation
+- VLAN Configuration
+- Cisco Switching
+- Layer 2 Troubleshooting
+- Network Segmentation
 
 
 ## Network Topology
@@ -204,4 +208,37 @@ The DNS server address was corrected to 192.168.20.100
 ![Verification](incidents/004-verification.png)
 
 Hostname resolution was restored. The work station successfully resolved fileserver.local and communicated with the server.
+
+### Incident 005 - VLAN Misconfiguration
+
+#### Symptoms
+![Symptoms](incidents/005-symptom.png)
+
+PC3 was unable to communicate with PC4 despite valid IP addressing.
+
+Evidence:
+- Failed ICMP communication between hosts.
+- Both systems remained online.
+
+#### Investigation
+![Investigation](incidents/005-investigation.png)
+
+Switch VLAN membership was examined using:
+- show VLAN brief
+
+Port Fa0/2 was assigned to VLAN 20 rather than VLAN 10. This prevented communication between PC3 and PC4 because the devices were no longer members of the same broadcast domain. 
+
+#### Resolution
+![Resolution](incidents/005-resolution.png)
+
+Port Fa0/2 was reassigned to VLAN 10 and the switch configuration was restored.
+
+#### Verification
+![Verfication](incidents/005-verification.png)
+
+![Verification](incidents/005-another-verification.png)
+
+Switch VLAN assignments were verified. 
+
+Connectivity testing confirmed communication between PC3 and PC4 was restored. 
 <!-- insert screenshot and troubleshooting -->
