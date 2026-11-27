@@ -162,4 +162,32 @@ The endpoint IP address was corrected from 192.168.30.11 to 192.168.20.11.
 ![Verification](incidents/003-verification.png)
 
 Connectivity was successfully restored. PC4 was able to communicate with the default gateway and other hosts on the local subnet.
+
+### Incident 004 - Incorrect DNS Server Configuration
+
+#### Symptoms
+![Symptoms](incidents/004-symptom.png)
+
+Users were unable to reach network resources using hostnames.
+
+Evidence:
+- Hostname resolution failed.
+- Direct Communication using IP addresses remained successful.
+
+#### Investigation
+![Investigation](incidents/004-investigation.png)
+
+The workstation DNS configuration was reviewed.
+- Expected DNS Sever: 192.168.20.100
+- Configured DNS Server: 192.168.20.200
+
+#### Resolution
+![Resolution](incidents/004-resolution.png)
+
+The DNS server address was corrected to 192.168.20.100
+
+#### Verification
+![Verification](incidents/004-verification.png)
+
+Hostname resolution was restored. The work station successfully resolved fileserver.local and communicated with the server.
 <!-- insert screenshot and troubleshooting -->
